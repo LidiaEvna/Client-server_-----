@@ -12,7 +12,7 @@ import java.net.Socket;
  */
 public class SqClient {
     public static void main(String[] args) throws IOException {
-        try(Socket socket = new Socket("localhost", 1020)){
+        try(Socket socket = new Socket("localhost", 1000)){
             OutputStream outputStream = socket.getOutputStream();
             outputStream.write(1);
             InputStream inputStream = socket.getInputStream();

@@ -12,7 +12,7 @@ import java.net.Socket;
  */
 public class SqServer {
     public static void main(String[] args) throws IOException {
-        try (ServerSocket serverSocket = new ServerSocket(1020)) {
+        try (ServerSocket serverSocket = new ServerSocket(1000)) {
             while (true) {
                 Socket socket = serverSocket.accept();
                 serverClient(socket);
@@ -29,7 +29,7 @@ public class SqServer {
             System.out.println("Результат:" + request);
             outputStream.write(request + 1);
 
-        } while (request < 19);
+        } while (request < 9);
         outputStream.flush();
     }
 }
