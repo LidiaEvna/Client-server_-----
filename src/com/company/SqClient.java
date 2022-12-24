@@ -12,8 +12,9 @@ import java.net.Socket;
  */
 public class SqClient {
     public static void main(String[] args) throws IOException {
-        try(Socket socket = new Socket("localhost", 1000)){
-            OutputStream outputStream = socket.getOutputStream();
+        try(Socket socket = new Socket("Локальный хост", 1000)){
+
+            OutputStream outputStream = socket.getOutputStream();//Получают поток ввода для чтения данных из сокета или записи данных в сокет
             outputStream.write(1);
             InputStream inputStream = socket.getInputStream();
             int response;
